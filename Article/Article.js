@@ -1,6 +1,6 @@
 /* This is the data we will be using to create our article components */
 /* Look over this data, then proceed to line 91*/
-
+// import { open,close } from '../Menu/constants.js';
 const data = [
   {
     title: 'Lambda School Students: "We\'re the best!"',
@@ -128,7 +128,7 @@ const data = [
   </div>
   */
  let articles = document.querySelector('.articles')
- function creator({title, date,firstParagraph,secondParagraph,thirdParagraph}){
+ function creator(obj){
     let articleParent = document.createElement('div');
     let articleTitle = document.createElement('h2');
     let articleDate = document.createElement('p');
@@ -155,11 +155,11 @@ const data = [
     articleParent.appendChild(articleSpan);
 
 
-    articleTitle.textContent = title;
-    articleDate.textContent = date;
-    articleP1.textContent = firstParagraph;
-    articleP2.textContent = secondParagraph;   
-    articleP3.textContent = thirdParagraph;     
+    articleTitle.textContent = obj.title;
+    articleDate.textContent = obj.date;
+    articleP1.textContent = obj.firstParagraph;
+    articleP2.textContent = obj.secondParagraph;   
+    articleP3.textContent = obj.thirdParagraph;     
     articleSpan.textContent = 'Open';               
     
 
